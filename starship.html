@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Starship — Salvatore Polise</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-nav">
+    <a class="navbar-brand brand-logo" href="index.html">SP<span class="dot">.</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="spacex.html">SpaceX</a></li>
+        <li class="nav-item active"><a class="nav-link" href="starship.html">Starship</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <canvas id="stars"></canvas>
+
+  <header class="page-hero d-flex flex-column justify-content-center align-items-center text-center">
+    <span class="section-tag">The rocket</span>
+    <h1 class="hero-name">Starship</h1>
+    <p class="hero-subtitle">The most powerful launch vehicle ever built.</p>
+  </header>
+
+  <!-- SPECS -->
+  <section class="container specs-section">
+    <span class="section-tag">By the numbers</span>
+    <h2 class="section-title mb-5">Technical specs</h2>
+
+    <div class="row">
+      <div class="col-md-6">
+        <table class="specs-table">
+          <thead>
+            <tr>
+              <th>Spec</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Height</td><td>121 m (397 ft)</td></tr>
+            <tr><td>Diameter</td><td>9 m (30 ft)</td></tr>
+            <tr><td>Mass (full)</td><td>~5,000 tons</td></tr>
+            <tr><td>Engines</td><td>33 Raptors (booster) + 6 (ship)</td></tr>
+            <tr><td>Thrust</td><td>~74.3 MN (~16.7 million lbf)</td></tr>
+            <tr><td>Propellant</td><td>Liquid Methane / Liquid Oxygen</td></tr>
+            <tr><td>Payload to LEO</td><td>150+ tons (fully reusable)</td></tr>
+            <tr><td>Target destination</td><td>Moon, Mars, Earth orbit</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-6 d-flex align-items-center justify-content-center mt-5 mt-md-0">
+        <div class="rocket-visual">
+          <div class="rocket-ship"></div>
+          <div class="rocket-booster"></div>
+          <div class="rocket-flame"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ ACCORDION -->
+  <section class="container faq-section">
+    <span class="section-tag">FAQ</span>
+    <h2 class="section-title mb-4">Common questions</h2>
+
+    <div id="faqAccordion">
+
+      <div class="card faq-card">
+        <div class="card-header" id="q1">
+          <button class="btn btn-link faq-question collapsed" data-toggle="collapse" data-target="#a1">
+            Why is Starship so important?
+          </button>
+        </div>
+        <div id="a1" class="collapse" data-parent="#faqAccordion">
+          <div class="card-body faq-answer">
+            Starship is fully and rapidly reusable — like an airplane — which could reduce the cost of reaching orbit by 100x. This makes large-scale space exploration economically viable for the first time.
+          </div>
+        </div>
+      </div>
+
+      <div class="card faq-card">
+        <div class="card-header" id="q2">
+          <button class="btn btn-link faq-question collapsed" data-toggle="collapse" data-target="#a2">
+            What is the Super Heavy booster?
+          </button>
+        </div>
+        <div id="a2" class="collapse" data-parent="#faqAccordion">
+          <div class="card-body faq-answer">
+            Super Heavy is the first stage of Starship. It carries 33 Raptor engines and is designed to be caught back at the launch tower by giant mechanical arms called "Mechazilla" or the "Chopstick arms".
+          </div>
+        </div>
+      </div>
+
+      <div class="card faq-card">
+        <div class="card-header" id="q3">
+          <button class="btn btn-link faq-question collapsed" data-toggle="collapse" data-target="#a3">
+            When will Starship go to Mars?
+          </button>
+        </div>
+        <div id="a3" class="collapse" data-parent="#faqAccordion">
+          <div class="card-body faq-answer">
+            SpaceX plans uncrewed cargo missions to Mars as early as the late 2020s, with crewed missions targeted for the early 2030s — though timelines in space are always optimistic.
+          </div>
+        </div>
+      </div>
+
+      <div class="card faq-card">
+        <div class="card-header" id="q4">
+          <button class="btn btn-link faq-question collapsed" data-toggle="collapse" data-target="#a4">
+            What fuel does Starship use?
+          </button>
+        </div>
+        <div id="a4" class="collapse" data-parent="#faqAccordion">
+          <div class="card-body faq-answer">
+            Starship uses liquid methane (CH₄) and liquid oxygen (LOX). Methane was chosen because it can be produced on Mars from its atmosphere — enabling a return trip using local resources.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="text-center mb-5 pt-3">
+    <a href="gallery.html" class="btn-link-arrow">Next: Gallery →</a>
+  </div>
+
+  <footer class="site-footer text-center">
+    <p>Made with ☄️ by <strong>Salvatore Polise</strong> — CS50 Homepage Project</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salvatore Polise — Space Explorer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-nav">
+    <a class="navbar-brand brand-logo" href="index.html">SP<span class="dot">.</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="spacex.html">SpaceX</a></li>
+        <li class="nav-item"><a class="nav-link" href="starship.html">Starship</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- STAR CANVAS -->
+  <canvas id="stars"></canvas>
+
+  <!-- HERO -->
+  <header class="hero d-flex flex-column justify-content-center align-items-center text-center">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Hello, I'm</p>
+      <h1 class="hero-name">Salvatore Polise</h1>
+      <p class="hero-subtitle">Passionate about <span id="rotating-word">Space</span></p>
+      <a href="spacex.html" class="btn btn-outline-light btn-hero mt-4">Explore →</a>
+    </div>
+    <div class="scroll-hint">↓</div>
+  </header>
+
+  <!-- ABOUT SECTION -->
+  <section class="about-section container">
+    <div class="row align-items-center">
+      <div class="col-md-6 fade-in">
+        <span class="section-tag">About me</span>
+        <h2 class="section-title">Looking up<br/>since day one.</h2>
+        <p class="section-text">
+          My name is Salvatore Polise and I've been fascinated by the cosmos for as long as I can remember.
+          From backyard stargazing to watching every SpaceX launch live — the universe never gets boring.
+        </p>
+        <p class="section-text">
+          I follow the development of <strong>Starship</strong>, the most powerful rocket ever built, with the same
+          excitement others reserve for the World Cup. This site is my little corner of the web dedicated to that passion.
+        </p>
+        <a href="starship.html" class="btn-link-arrow">Read about Starship →</a>
+      </div>
+      <div class="col-md-6 fade-in text-center mt-5 mt-md-0">
+        <div class="planet-card">
+          <div class="planet"></div>
+          <p class="planet-label">Earth — our launchpad</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK LINKS CARDS -->
+  <section class="cards-section container">
+    <span class="section-tag">Explore</span>
+    <h2 class="section-title mb-5">Sections of the site</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <a href="spacex.html" class="site-card">
+          <div class="card-icon">🚀</div>
+          <h3 class="card-title">SpaceX</h3>
+          <p class="card-desc">The company that reinvented the space industry.</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="starship.html" class="site-card">
+          <div class="card-icon">🛸</div>
+          <h3 class="card-title">Starship</h3>
+          <p class="card-desc">The fully reusable rocket that will take us to Mars.</p>
+        </a>
+      </div>
+      <div class="col-md-4 mb-4">
+        <a href="gallery.html" class="site-card">
+          <div class="card-icon">🌌</div>
+          <h3 class="card-title">Gallery</h3>
+          <p class="card-desc">Stunning images from space exploration.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer text-center">
+    <p>Made with ☄️ by <strong>Salvatore Polise</strong> — CS50 Homepage Project</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

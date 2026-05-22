@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Salvatore Polise</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top site-nav">
+    <a class="navbar-brand brand-logo" href="index.html">SP<span class="dot">.</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="spacex.html">SpaceX</a></li>
+        <li class="nav-item"><a class="nav-link" href="starship.html">Starship</a></li>
+        <li class="nav-item active"><a class="nav-link" href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <canvas id="stars"></canvas>
+
+  <header class="page-hero d-flex flex-column justify-content-center align-items-center text-center">
+    <span class="section-tag">Visual</span>
+    <h1 class="hero-name">Gallery</h1>
+    <p class="hero-subtitle">The universe in pictures.</p>
+  </header>
+
+  <!-- FILTER BUTTONS -->
+  <section class="container gallery-section">
+    <div class="text-center mb-5">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="earth">Earth</button>
+      <button class="filter-btn" data-filter="space">Deep Space</button>
+      <button class="filter-btn" data-filter="rocket">Rockets</button>
+    </div>
+
+    <div class="row gallery-grid" id="gallery-grid">
+
+      <!-- Earth -->
+      <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="earth">
+        <div class="gallery-card">
+          <div class="gallery-img earth-img-1"></div>
+          <div class="gallery-caption">
+            <h5>Earth from orbit</h5>
+            <p>Our pale blue dot seen from the International Space Station.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="earth">
+        <div class="gallery-card">
+          <div class="gallery-img earth-img-2"></div>
+          <div class="gallery-caption">
+            <h5>Auroras from above</h5>
+            <p>Northern lights viewed from low Earth orbit.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deep Space -->
+      <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="space">
+        <div class="gallery-card">
+          <div class="gallery-img space-img-1"></div>
+          <div class="gallery-caption">
+            <h5>Pillars of Creation</h5>
+            <p>Star-forming region in the Eagle Nebula, imaged by Hubble.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="space">
+        <div class="gallery-card">
+          <div class="gallery-img space-img-2"></div>
+          <div class="gallery-caption">
+            <h5>James Webb Deep Field</h5>
+            <p>Thousands of galaxies, each containing billions of stars.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="space">
+        <div class="gallery-card">
+          <div class="gallery-img space-img-3"></div>
+          <div class="gallery-caption">
+            <h5>The Milky Way</h5>
+            <p>Our galaxy photographed from a dark sky site.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rockets -->
+      <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="rocket">
+        <div class="gallery-card">
+          <div class="gallery-img rocket-img-1"></div>
+          <div class="gallery-caption">
+            <h5>Falcon 9 landing</h5>
+            <p>The booster returns to a drone ship in the Atlantic Ocean.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="rocket">
+        <div class="gallery-card">
+          <div class="gallery-img rocket-img-2"></div>
+          <div class="gallery-caption">
+            <h5>Starship liftoff</h5>
+            <p>IFT-4: Starship clears the pad at Starbase, Texas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6 mb-4 gallery-item" data-category="earth">
+        <div class="gallery-card">
+          <div class="gallery-img earth-img-3"></div>
+          <div class="gallery-caption">
+            <h5>Sahara from space</h5>
+            <p>The world's largest desert seen from 400 km up.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FUN FACT BOX -->
+  <section class="container fun-fact-section text-center mb-5">
+    <div class="fun-fact-box">
+      <p class="fun-fact-label">🌠 Random Space Fact</p>
+      <blockquote id="fact-text" class="fun-fact-text">Click the button to learn something amazing.</blockquote>
+      <button id="fact-btn" class="btn btn-outline-light mt-3">New fact →</button>
+    </div>
+  </section>
+
+  <footer class="site-footer text-center">
+    <p>Made with ☄️ by <strong>Salvatore Polise</strong> — CS50 Homepage Project</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
